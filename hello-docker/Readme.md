@@ -41,7 +41,7 @@ FROM node:alpine
 ```
 where the tag `:apline` specifies the linux distribution we want to use ([`alpine`](https://hub.docker.om/_/alpine) is very light-weight, also see [`ubuntu`](https://hub.docker.om/_/ubuntu)). 
 
-This will be the image we will download on build our application on top.
+This will be the image we will download, and on which we will build our application on top of.
 
 2. Then we need to **copy** our program-files (the entire application) to the image:
 ```bash
