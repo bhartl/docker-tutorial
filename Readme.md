@@ -92,6 +92,8 @@ Once we have an Image, we tell Docker to start a Container using that Image.
 
 As mentioned above, a Container is a just a process - but a special one:  it has its own file-system, provided by the Image.
 
+### Run a Container
+
 Our application gets loaded into a Container (or a process).
 So instead of directly running an app via
 ```bash
@@ -106,6 +108,20 @@ Docker provides registries (such as [dockerhub](https://hub.docker.com/)), which
 Thus, Images that are used locally for development can easily be transferred to either testing- or production machines (with all dependencies etc.). 
 
 With Docker, we can package an application into an Image and let it run virtually anywhere.
+
+### Delete a Ctonainer
+
+We can now run docker multiple times, which leaves stray containers that may eat up disk space. 
+Hence, as a rule of thumb, we can clean up containers once we are done with them. 
+To do that, we can run the `docker rm` command: Just copy the container IDs (we can find those via the `docker ps -a` command) and execute
+
+$ docker rm <container ID_i> <container ID_j>
+
+With the following command
+```bash
+docker rm $(docker ps -a -q -f status=exited)
+```
+we can delete all containers that have a status of exited.
 
 ### Examples
 
