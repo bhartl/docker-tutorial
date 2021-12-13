@@ -1,20 +1,24 @@
-# Docker with [Mosh](https://www.youtube.com/watch?v=pTFZFxd4hOI)
-a beginners-to-pro hands-on tutorial by [*Mosh Hamedani*](codewithmosh.com), implemented by [B. Hartl](bhartl.github.io).
+# Docker-Tuorial
+Here we mostly follow [*Mosh Hamedani*](codewithmosh.com)'s [Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI), a hands-on tutorial.
 
 ## What is Docker?
-A platform for **building**, **running** and **shipping** applications - so if a software is running on your docker-machine, it will also run on others like it.
+A platform for **building**, **running** and **shipping** applications. 
+If a software is running on your docker-machine, it will also run on others like it.
 
+For many modern software-projects, this is already a large deal. 
+Transfering software from a developing machine to a test- or production machine might be cumbersome and often does not work out of the box.
 This might be caused by
 - one or more missing files
 - software version mismatch
 - different configurations settings (such as environment variables)
+- ...
 
-Here, [docker](https://www.docker.com/) comes to the rescue:
-- **Package-up your application**, with everything it needs, then **run it everywhere and anywhere** using docker.
-- With `docker-compuse up`, all application-dependencies can _automatically_ be setup, on any machine, in an _isolated environment_, called a _container_.
-- This allows, for instance, to run different versions of your application in different containers on a single machine.
-- With docker, each application runs in its isolated environment, which can be turned down with `docker-compose down --rmi all`.
-- So, docker helps us to **consistently** *build, run and ship* our *applications*.
+Here, [Docker](https://www.docker.com/) comes to the rescue:
+- With Docker, we can **package-up our application**, with everything it needs, in a Docker **Image**, and **run it everywhere and anywhere** using Docker.
+- With Docker, all application-dependencies can automatically be setup on any machine in an **isolated environment**, called a **Container**.
+- This allows, for instance, to run different versions of your application in different containers on a single machine or on multiple machines.
+
+So, Docker helps us to **consistently** **build, run** and **ship** our **applications**.
 
 ### Basic Terminologies
 
@@ -24,26 +28,26 @@ Here, [docker](https://www.docker.com/) comes to the rescue:
 
 ## Virtual Machines vs Containers
 
-### Virtual Machine 
+### Virtual Machine
 _An abstraction of a machine (or of physical hardware)_
 
 Several virtual machines (VMs) may be run from a single hardware. These VMs are managed by a so-called *hypervisor* (see, e.g., [VirtualBox](https://www.virtualbox.org/) or [VMware](https://www.vmware.com/)).
 Software can then be written/installed/... on different VMs on the same physical hardware *in isolation*.
 
 **Problems with VMs**:
-- **Each VM** needs a **full-blown operating system** (OS) - so a copy of the entire OS it emulates (including licenses, ...).
-- Vms are thus **slow to start** (the entire OS needs to be loaded such as starting your computer)
-- They are **resource intensive**, since they rely on the physical hardware they run on (CPUs, RAM, Storage, ...).
+- **Each VM** needs a full **operating system** (OS), so a copy of the entire OS.
+- Vms are thus **slow to start** (the entire OS needs to be loaded, comparable to starting your computer)
+- They are **resource intensive** since they rely on the physical hardware they run on (CPUs, RAM, Storage, ...).
 
 ### Container 
 _An isolated environment for running applications_
 
 Just like VMs, **containers allow**
-- **running multiple apps in isolation**, 
-- but they are **more lightweight**.
+- **running multiple apps in isolated environments**
+- while being **more lightweight** than VMs.
 - All containers running on a system **share** the **same OS as the host** (thus, only a single OS needs to be licensed, hashed and monitored).
 - Containers can be **started quickly** (often in less than a second), and they
-- need **less hardware resources**, compared to VMs (no CPUs or memory needs to be especially assigned to containers).
+- need **less hardware resources** compared to VMs (no CPUs or memory needs to be especially assigned to containers).
 
 ## Architecture of Docker
 Docker uses a **client-server architecture**. 
@@ -52,7 +56,7 @@ The server (i.e., the *docker engine*) manages docker-containers.
 
 Technically, containers are just *processes*, running on a computer.
 All containers share the OS of the host, or, more accurately, the host's kernel.
-Thus, Linux-containers can be run on all Linux-kernels (e.g., on a _Linux_ machine, on _Windows>=10_ systems, or on MACs' *Linux VM*).
+Thus, Linux-containers can be executed on all Linux-kernels (e.g., on a _Linux_ machine, on _Windows>=10_ systems, or on MACs' *Linux VM*).
 
 ## Installing Docker 
 Install instructions for docker can be found at [docs.docker.com/get-docker/](https://docs.docker.com/get-docker/).
@@ -66,45 +70,44 @@ To **verify** the **installation** of the Docker Engine, run the hello-world ima
 sudo docker run hello-world
 ```
 
-This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.
+This command downloads a test image and runs it in a container. 
+When the container runs, it prints a message and exits.
 
 ## Development Workflow
-In short, any project (or application) can be *dockerized*:
- simple add a `Dockerfile` to the application.
+In short, any project (or application) can be *dockerized* simply by adding a `Dockerfile` to the application.
 (Depending on the editor you are using, such as PyCharm or VSCode, there should be Docker-plugins available to help you to manage a `Dockerfile`.)
 
-A `Dockerfile` is a plain text files that includes instructions which docker uses to *package-up an application* into an *image*.
+A `Dockerfile` is a plain text file that includes instructions which docker uses to *package-up an application* into an *Image*.
 
-This *image* contains everything the application needs to run:
+This *Image* contains everything the application needs to run:
 - A cut-down OS
-- A runtime environment (e.g., Node or Python)
+- A runtime environment (e.g., Node, Python, etc.)
 - Application files
 - Thirds-party libraries
 - Environment variables
 - ...
 
-Once we have an image, we tell docker to start a container using that image. 
+Once we have an Image, we tell Docker to start a Container using that Image. 
 
-As mentioned above, a container is a just a process - but a special one: 
-it has its own file-system, provided by the image.
+As mentioned above, a Container is a just a process - but a special one:  it has its own file-system, provided by the Image.
 
-Our application gets loaded into a container (or a process).
+Our application gets loaded into a Container (or a process).
 So instead of directly running an app via
 ```bash
-my-app
+<my-app>
 ```
-we use docker to run the application in a container, an isolated environment
+we use Docker to run the application in a Container, an isolated environment
 ```bash
-docker run ...
+docker run <my-app>
 ```
 
-Docker provides registries (such as [dockerhub](https://hub.docker.com/)), which is a storage for docker images that anyone can use.
-Thus, images that are used locally for development can easily be transferred to either testing- or production machines (with all dependencies etc.). 
+Docker provides registries (such as [dockerhub](https://hub.docker.com/)), which is a storage for Docker Images that anyone can use.
+Thus, Images that are used locally for development can easily be transferred to either testing- or production machines (with all dependencies etc.). 
 
-With docker, we can package an application into an image and let it run virtually anywhere.
+With Docker, we can package an application into an Image and let it run virtually anywhere.
 
 ### Examples
 
-For the hands-on example of using docker in a real-world application, checkout the [hello-docker](hello-docker) app.
+For the hands-on example of using Docker in a 'real-world' application, checkout the [hello-docker](hello-docker) directory.
 
-Also, checkout the simple [hello-flask](hello-flask) app, following [G. Singh's Blog-Post](https://towardsdatascience.com/docker-made-easy-for-data-scientists-b32efbc23165).
+Also, checkout the simple [hello-flask](hello-flask) directory, following [G. Singh's Blog-Post](https://towardsdatascience.com/docker-made-easy-for-data-scientists-b32efbc23165).
