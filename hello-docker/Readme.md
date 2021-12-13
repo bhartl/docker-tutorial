@@ -92,7 +92,7 @@ Thus, we re-tag our local image using
 sudo docker tag hello-docker bhartl/hello-docker
 ```
 
-And `push` the container to DockerHub via
+And `push` the Image to DockerHub via
 ```bash
 sudo docker push bhartl/hello-docker
 ```
@@ -101,7 +101,7 @@ The image can then be accessed, see [bhartl/hello-docker](https://hub.docker.com
 
 *Note: make sure to be logged in to DockerHub on the command line via `docker login`.*
 
-Vice-versa, a docker-image can be downloaded, i.e. `pulled`, from DockerHub via 
+Vice-versa, a Docker Image can be downloaded, i.e. `pulled`, from DockerHub via 
 ```bash
 sudo docker pull bhartl/hello-docker
 ```
