@@ -24,7 +24,7 @@ If you want to use the app from a computer, here are the typical instructions to
 Hello Docker!
 ```
 
-For this application, docker seems like an overhead - but what if there were many files, version-specific dependencies to the app, and so on?
+For this application, docker seems like an overkill - but what if there were many files, version-specific dependencies to the app, and so on?
 
 ## Docker Containerization
 We add a [`Dockerfile`](./Dockerfile) to our application (Depending on the editor you are using, such as PyCharm or VSCode, there should be Docker-plugins available to help you to manage a `Dockerfile`.).
