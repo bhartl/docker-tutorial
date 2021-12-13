@@ -1,5 +1,5 @@
 # Docker-Tuorial
-Here, we mostly follow [*Mosh Hamedani*](codewithmosh.com)'s [Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI), a hands-on tutorial.
+Here, we mostly follow [*Mosh Hamedani*](codewithmosh.com)'s [Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI), a hands-on Youtube-tutorial.
 Also G. Singh's [Blog-Post](https://towardsdatascience.com/docker-made-easy-for-data-scientists-b32efbc23165), or the [docker-curriculum](https://docker-curriculum.com/) by [P. Srivastav](https://prakhar.me/).
 
 ## What is Docker?
