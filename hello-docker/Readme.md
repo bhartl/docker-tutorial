@@ -85,7 +85,7 @@ Hello Docker!
 ## Distribute via [DockerHub](https://hub.docker.om/_/ubuntu)
 We could now distribute the `hello-docker` image via DockerHub, so we could use it from any computer (following this [how-to](https://docs.docker.com/docker-hub/repos/)).
 
-To push an image to DockerHub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
+To push an image to DockerHub, you must first name your local image using your DockerHub username and the repository name that you created through Docker Hub on the web.
 
 Thus, we re-tag our local image using
 ```bash
