@@ -16,7 +16,7 @@ Let's say, this is an application (which it is, it prints a message to the termi
 ## Run without Docker
 If you want to use the app from a computer, here are the typical instructions to let the code run:
 - Start with an OS
-- **Install `node`** (program to run javascript files, `sudo apt install nodejs`)
+- **Install `node`** (to run javascript ocde, install with `sudo apt install nodejs`)
 - Copy the app files.
 - Run the application with the following command:
 ```bash
