@@ -1,7 +1,7 @@
 # Simple Flask APP
 following [G. Singh's Blog-Post](https://towardsdatascience.com/docker-made-easy-for-data-scientists-b32efbc23165).
 
-This is a very simple app that prints ‘hello world’ on the browser’s screen.
+This is a very simple app that prints ‘Hello World!’ on a browser’s screen.
 The Python-code can be found in [app.py](app.py).
 
 All Python-dependencies are listed in the  [requirements.txt](requirements.txt)-file (crated via `pip3 list > requirements.txt`).
