@@ -109,9 +109,9 @@ Thus, Images that are used locally for development can easily be transferred to 
 
 With Docker, we can package an application into an Image and let it run virtually anywhere.
 
-### Delete a Ctonainer
+### Delete a Container
 
-We can now run docker multiple times, which leaves stray containers that may eat up disk space. 
+If we run docker multiple times, which leaves stray containers that may eat up disk space. 
 Hence, as a rule of thumb, we can clean up containers once we are done with them. 
 To do that, we can run the `docker rm` command: Just copy the container IDs (we can find those via the `docker ps -a` command) and execute
 
