@@ -115,7 +115,9 @@ Running docker multiple times leaves stray containers that may eat up disk space
 Hence, as a rule of thumb, we can clean up containers once we are done with them. 
 To do that, we can run the `docker rm` command: Just copy the container IDs (we can find those via the `docker ps -a` command) and execute
 
-$ docker rm <container ID_i> <container ID_j>
+```bash
+docker rm <container ID_i> <container ID_j>
+```
 
 With the following command
 ```bash
