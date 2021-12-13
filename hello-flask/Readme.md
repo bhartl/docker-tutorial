@@ -10,8 +10,9 @@ All Python-dependencies are listed in [requirements.txt](requirements.txt).
 
 Here is the outline, what we are going to do:
 
-1. We weill create a [Dockerfile](Dockerfile) that will contain information about the Docker Image which runs our application. (It includes a base-image, python, python environment and then running the app itself.)
-2. Then we will build Dockerfile.
+1. We will create a [Dockerfile](Dockerfile) that will contain information about the Docker Image which runs our application. (It includes a base-image, python, python environment and then running the app itself.)
+2. Then we will build a Docker Image,
+3. and start a Docker Container thereof.
 
 ### The Dockerfile
 1. We pull an ubuntu image (using the `:latest` tag): `FROM ubuntu:latest`
