@@ -59,14 +59,14 @@ CMD node app.js
 Note, that in the container, the `app.js` application is located within the `/app` directory in the image. Thus, we need to either run `CMD node /app/app.js` to execute the application, or, as in our case, we first `cd` into the `/app` directory using `WORKDIR /app` and execute `CMD node app.js` subsequently.
 
 ## Run with Docker
-1. Build the Docker-Image (depending on your Docker installation, you might need to execute all `docker` commands as `sudo`)
+1. Build the Docker Image (depending on your Docker installation, you might need to execute all `docker` commands as `sudo`)
 ```bash
 docker build -t hello-docker .
 ```
 With the `-t` option, we specify the `tag` of the image (its name, i.e. `hello-docker`), 
 and we specify where `docker` can find the [`Dockerfile`](./Dockerfile) via `.`, i.e., in the (current) [hello-docker](.) directory.
 
-2. Check the Docker-Image List
+2. Check the Docker Image List
 ```bash
 > docker image ls
 REPOSITORY     TAG       IMAGE ID       CREATED              SIZE
@@ -82,26 +82,26 @@ Here we can find our `hello-docker` image with a size of `170MB` (we used Linux-
 Hello Docker!
 ```
 
-## Distribute via [dockerhub](https://hub.docker.om/_/ubuntu)
-We could now distribute the `hello-docker` image via dockerhub, so we could use it from any computer (following this [how-to](https://docs.docker.com/docker-hub/repos/)).
+## Distribute via [DockerHub](https://hub.docker.om/_/ubuntu)
+We could now distribute the `hello-docker` image via DockerHub, so we could use it from any computer (following this [how-to](https://docs.docker.com/docker-hub/repos/)).
 
-To push an image to Docker Hub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
+To push an image to DockerHub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
 
 Thus, we re-tag our local image using
 ```bash
 sudo docker tag hello-docker bhartl/hello-docker
 ```
 
-And `push` the container to `dockerhub` via
+And `push` the container to DockerHub via
 ```bash
 sudo docker push bhartl/hello-docker
 ```
 
 The image can then be accessed, see [bhartl/hello-docker](https://hub.docker.com/repository/docker/bhartl/hello-docker).
 
-*Note: make sure to be logged in to `dockerhub` on the command line via `docker login`.*
+*Note: make sure to be logged in to DockerHub on the command line via `docker login`.*
 
-Vice-versa, a docker-image can be downloaded, i.e. `pulled`, from docker-hub via 
+Vice-versa, a docker-image can be downloaded, i.e. `pulled`, from DockerHub via 
 ```bash
 sudo docker pull bhartl/hello-docker
 ```
