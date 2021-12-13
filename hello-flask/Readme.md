@@ -4,7 +4,7 @@ following [G. Singh's Blog-Post](https://towardsdatascience.com/docker-made-easy
 This is a very simple app that prints ‘Hello World!’ on a browser’s screen.
 The Python-code can be found in [app.py](app.py).
 
-All Python-dependencies are listed in the  [requirements.txt](requirements.txt)-file (crated via `pip3 list > requirements.txt`).
+All Python-dependencies are listed in [requirements.txt](requirements.txt).
 
 ## Containerizing the app
 
