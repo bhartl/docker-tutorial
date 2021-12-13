@@ -35,7 +35,7 @@ Typically, we start from a **base-image**
 
 which you find both on [dockerhub](https://hub.docker.com/) (a registry for docker images).
 
-1. We simply start with defining the **base-image** in the [`Dockerfile`](./Dockerfile) via
+1. First, we define the **base-image** in the [`Dockerfile`](./Dockerfile) via
 ```bash
 FROM node:alpine
 ```
