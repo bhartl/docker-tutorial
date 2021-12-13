@@ -78,7 +78,7 @@ Here we can find our `hello-docker` image with a size of `170MB` (we used Linux-
 
 4. Run the Application in a Docker-Container
 ```bash
-> run hello-docker
+> docker run hello-docker
 Hello Docker!
 ```
 
