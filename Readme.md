@@ -1,10 +1,6 @@
 # Docker with [Mosh](https://www.youtube.com/watch?v=pTFZFxd4hOI)
 a beginners-to-pro hands-on tutorial by [*Mosh Hamedani*](codewithmosh.com), implemented by [B. Hartl](bhartl.github.io).
 
-**Prerequisites**:
-- 3 months of programming experience
-- basic knowledge of front- and backend terminologies, git-commands
-
 ## What is Docker?
 A platform for **building**, **running** and **shipping** applications - so if a software is running on your docker-machine, it will also run on others like it.
 
@@ -19,6 +15,12 @@ Here, [docker](https://www.docker.com/) comes to the rescue:
 - This allows, for instance, to run different versions of your application in different containers on a single machine.
 - With docker, each application runs in its isolated environment, which can be turned down with `docker-compose down --rmi all`.
 - So, docker helps us to **consistently** *build, run and ship* our *applications*.
+
+### Basic Terminologies
+
+- **Docker Image**: In very simple terms, a docker image is just like an ISO image file used to install any OS. You can view all (publicly available) docker images on DockerHub
+- **Docker Container**: When a Docker Image runs it becomes a Docker Container.
+- **Dockerfile**: A Dockerfile contains all the code to set up a docker container, from downloading the docker image, over setting up the environment to running an application.
 
 ## Virtual Machines vs Containers
 
