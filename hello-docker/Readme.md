@@ -92,7 +92,7 @@ Thus, we re-tag our local image using
 sudo docker tag hello-docker bhartl/hello-docker
 ```
 
-And `push` the Image to DockerHub via
+And `push` the image to DockerHub via
 ```bash
 sudo docker push bhartl/hello-docker
 ```
