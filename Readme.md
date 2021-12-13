@@ -93,7 +93,7 @@ my-app
 ```
 we use docker to run the application in a container, an isolated environment
 ```bash
-docekr run ...
+docker run ...
 ```
 
 Docker provides registries (such as [dockerhub](https://hub.docker.com/)), which is a storage for docker images that anyone can use.
