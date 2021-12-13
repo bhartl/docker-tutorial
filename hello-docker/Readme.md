@@ -27,7 +27,7 @@ Hello Docker!
 For this application, docker seems like an overkill - but what if there were many files, version-specific dependencies to the app, and so on?
 
 ## Docker Containerization
-We add a [`Dockerfile`](./Dockerfile) to our application (Depending on the editor you are using, such as PyCharm or VSCode, there should be Docker-plugins available to help you to manage a `Dockerfile`.).
+We add a [`Dockerfile`](./Dockerfile) to our application.
 
 Typically, we start from a **base-image**
 - which could be a [`alpine`-image](https://hub.docker.com/_/alpine) with a `nodejs` installation on top, or a 
