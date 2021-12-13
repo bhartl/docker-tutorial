@@ -9,7 +9,7 @@ def hello_world():
     return "Hello World"
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/square', methods=['POST'])
 def print_square():
     received_value = int(request.get_json(force=True))
     print(received_value)

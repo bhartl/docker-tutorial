@@ -57,7 +57,7 @@ If so, we can see the `Hello World` output when browsing our [Hello-Flask](http:
 
 To access the `print_square(arg)` function in the [app.py](app.py), we can use, for instance, `curl`:
 ```bash
-> curl -X POST http://127.0.0.1:5000/predict -d 5
+> curl -X POST http://127.0.0.1:5000/square -d 5
 25
 ```
 
