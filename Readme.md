@@ -101,4 +101,8 @@ Thus, images that are used locally for development can easily be transferred to 
 
 With docker, we can package an application into an image and let it run virtually anywhere.
 
-For the hands-on example of using docker in a real-world application, checkout the [hello-docker](hello-docker) project.
+### Examples
+
+For the hands-on example of using docker in a real-world application, checkout the [hello-docker](hello-docker) app.
+
+Also checkout the simple [hello-flask](hello-flask) app, following [G. Singh's Blog-Post](https://towardsdatascience.com/docker-made-easy-for-data-scientists-b32efbc23165).
