@@ -93,7 +93,7 @@ my-app
 ```
 we use docker to run the application in a container, an isolated environment
 ```bash
-docekr run ...
+docker run ...
 ```
 
 Docker provides registries (such as [dockerhub](https://hub.docker.com/)), which is a storage for docker images that anyone can use.
@@ -105,4 +105,4 @@ With docker, we can package an application into an image and let it run virtuall
 
 For the hands-on example of using docker in a real-world application, checkout the [hello-docker](hello-docker) app.
 
-Also checkout the simple [hello-flask](hello-flask) app, following [G. Singh's Blog-Post](https://towardsdatascience.com/docker-made-easy-for-data-scientists-b32efbc23165).
+Also, checkout the simple [hello-flask](hello-flask) app, following [G. Singh's Blog-Post](https://towardsdatascience.com/docker-made-easy-for-data-scientists-b32efbc23165).
